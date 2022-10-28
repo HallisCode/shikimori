@@ -7,19 +7,20 @@
     border-radius: 4px 4px 0px 0px;
     background-color: red;
     animation: ActivityAnimation;
-    animation-duration: 4s;
+    animation-duration: 3s;
     animation-iteration-count: infinite;
+    animation-timing-function: linear;
 }
 
 @keyframes ActivityAnimation {
     0% {
-        clip-path:unset(0 0 0 0)
+        hegiht
     }
-    0% {
-        clip-path:unset(15% 0 0 0)
+    50% {
+        clip-path:inset(15% 0 0 0)
     }
     100% {
-        clip-path:unset(0 0 0 0)
+        clip-path:inset(0 0 0 0)
     }
 }
 
