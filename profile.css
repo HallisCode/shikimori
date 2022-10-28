@@ -4,23 +4,27 @@
 /*Актвиность пользователя*/
 
 .bar.vertical .line .bar-container .bar {
-    border-radius: 4px 4px 0px 0px;
-    background-color: red;
+    border-radius: 6px 6px 0px 0px;
     animation: ActivityAnimation;
     animation-duration: 3s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
 }
 
+.bar.vertical .line .bar-container .bar:hover {
+    animation: none;
+}
+
+
 @keyframes ActivityAnimation {
     0% {
-        hegiht
+        transform:translateY(0px);
     }
     50% {
-        clip-path:inset(15% 0 0 0)
+        transform:translateY(15%);
     }
     100% {
-        clip-path:inset(0 0 0 0)
+        transform:translateY(0px);
     }
 }
 
@@ -39,3 +43,18 @@
   .activity .graph.vertical .line:nth-of-type(6n+5) .bar {
     animation-delay: -1.25s;
   }
+
+  .bar.simple .bar.s0 {
+    background-color: var(--very-hight-rating);
+  }
+  .bar.simple .bar.s1 {
+    background-color: var(--high-rating);
+  }
+  .bar.simple .bar.s2 {
+    background-color: var(--average-rating);
+  }
+  .bar.simple .bar.s3 {
+    background-color: var(--small-rating);
+  }
+
+  /*--------------------------------------------------------------*/
