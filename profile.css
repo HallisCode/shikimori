@@ -1,2 +1,40 @@
-.l-top_menu-v2 {
-background:red;}
+
+
+
+/*Актвиность пользователя*/
+
+.bar.vertical .line .bar-container .bar {
+    border-radius: 4px 4px 0px 0px;
+    background-color: red;
+    animation: ActivityAnimation;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes ActivityAnimation {
+    0% {
+        clip-path:unset(0 0 0 0)
+    }
+    0% {
+        clip-path:unset(15% 0 0 0)
+    }
+    100% {
+        clip-path:unset(0 0 0 0)
+    }
+}
+
+.activity .graph.vertical .line:nth-of-type(6n+2) .bar {
+    animation-delay: -.25s;
+  }
+  .activity .graph.vertical .line:nth-of-type(6n+4) .bar {
+    animation-delay: -.5s;
+  }
+  .activity .graph.vertical .line:nth-of-type(6n+3) .bar {
+    animation-delay: -.75s;
+  }
+  .activity .graph.vertical .line:nth-of-type(6n+6) .bar {
+    animation-delay: -1s;
+  }
+  .activity .graph.vertical .line:nth-of-type(6n+5) .bar {
+    animation-delay: -1.25s;
+  }
