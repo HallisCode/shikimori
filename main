@@ -1,0 +1,8 @@
+
+/* Цветовые схемы*/
+:root {
+    --very-high-rating:#495057;
+    --high-rating:#6c757d;
+    --average-rating:#adb5bd;
+    --small-rating:#dee2e6;
+}
