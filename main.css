@@ -1,8 +1,40 @@
 
-/* Цветовые схемы*/
+/* настройки */
 :root {
-    --very-high-rating:#495057;
-    --high-rating:#6c757d;
-    --average-rating:#adb5bd;
-    --small-rating:#dee2e6;
+
+    --theme--color:#fafafa;
+
+    --darkest-color:#495057;
+    --dark-color:#6c757d;
+    --light-color:#adb5bd;
+    --lightest-color:#dee2e6;
+
+    --very-high-rating:var(--darkest-color);
+    --high-rating:var(--dark-color);
+    --average-rating:var(--light-color);
+    --small-rating:var(--lightest-color);
+
+    --history-select:#f1f1f1;
+    
+    --border-radius: 6px;
+    --block-indents: 30px;
+    --middle-indent: calc(var(--block-indents)/2);
+
+    --font-size-standart:16px;
+    --font:'Roboto', sans-serif;
 }
+
+body {
+    font-size: var( --font-size-standart);
+    line-height: normal;
+  	font-family: var(--font) !important;
+    background-image: none;
+    background-color: var(--theme--color);
+}
+
+.l-page {
+    background-color: var(--theme--color)
+}
+
+
+/*-----------*/
