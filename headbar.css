@@ -1,0 +1,6 @@
+.l-top_Menu-v2 {
+	position:fixed; 
+}
+.l-top_menu-v2 .menu-dropdown>span {
+    background: none;
+}

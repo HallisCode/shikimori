@@ -1,0 +1,10 @@
+
+/* Сейчас на экранах */
+.p-dashboards-show .v2 .fc-ongoings .inner>.b-catalog_entry {
+    margin: 0px;
+}
+.p-dashboards-show .v2 .fc-ongoings .inner {
+    margin: 0px;
+    justify-content:space-between;
+}
+/*-----------*/
