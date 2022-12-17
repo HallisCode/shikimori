@@ -1,60 +1,286 @@
+/* Общие правила*/
+
+.m10, .m13 {
+  margin-bottom: 0 !important;
+}
+
+/* Заголовки блоков*/
+/* Активости и графика активности */
+.lifetime.b-stats_bar>.title>.label, .activity>.title {
+  color: var(--dark-color);
+  font-size: var(--font-size-standart);
+  text-transform: uppercase;
+  line-height: normal;
+
+}
+
+.lifetime.b-stats_bar>.title>.label::before, .activity>.title::before {
+  color: var(--dark-color);
+  font-size: var(--font-size-standart);
+  text-transform: uppercase;
+  line-height: normal;
+
+}
+
+/*-----------*/
+
+/* Избранное */
+.p-profiles-show .cc-favourites {
+  display: flex;
+  justify-content: space-between;
+}
+.p-profiles-show .cc-favourites:after {
+  content: none;
+}
+/*-----------*/
+
+/* Обложка */
+.p-profiles-show .profile-head:before {
+  content: '';
+  display: block;
+  height: 100px;
+  background: url("https://sun9-81.userapi.com/31HOmP9zHEoBbx0RA94869nhsygf1-Kgul1LQg/dEUhVUkAgp8.jpg") no-repeat;
+  background-size: cover;
+  margin: -15px;
+  margin-bottom: 10px;
+  background-position: 50% center;
+}
 
 
+@media (min-width:481px) {
+  .p-profiles .profile-head::before {
+    height: 150px;
+  }
+}
 
-/*Актвиность пользователя*/
+@media only screen and (min-width: 768px) {
+  .p-profiles .profile-head::before {
+    height: 300px;
+  }
+}
+
+/*-----------*/
+
+/*Основная информация о пользователе*/
+@media screen and (min-width: 768px) {
+  .p-profiles .profile-head .c-brief .avatar img {
+    height: 160px;
+    width: 160px;
+    border-radius: 50%;
+    outline: 5px solid var(--theme--color);
+  }
+
+  .p-profiles .profile-head .c-brief .avatar {
+    margin-top: -90px;
+  }
+}
+
+/*-----------*/
+
+/* Расположение блоков ( основная верстка ) */
+@media only screen and (min-width: 768px) {
+  .p-profiles-show .profile-content .cc-2>.c-column {
+    width: 100%;
+  }
+
+  .p-profiles-show .profile-content .cc-2>.c-left {
+    position: relative;
+    width: 75%;
+    padding-right: 30px;
+    margin-right: 0;
+    z-index: 1;
+  }
+
+  .p-profiles-show .lifetime {
+    margin-bottom: 30px;
+  }
+
+  .p-profiles-show .profile-content .cc-2>.c-right {
+    float: none;
+  }
+
+  .p-profiles-show .profile-content .cc-2>.c-right .cc-2a {
+    width: 25%;
+    overflow: hidden;
+  }
+
+  .p-profiles-show .profile-content .cc-2>.c-right .cc-2a>.c-column {
+    width: 100%;
+    margin: 0;
+  }
+
+  .p-profiles-show .profile-content .cc-2>.c-right .cc-2a>.c-column:last-child {
+    margin-top: 15px;
+  }
+
+  .p-profiles-show .profile-content .cc-2>.c-right>.block:last-child {
+    clear: both;
+  }
+
+  .p-profiles-show .profile-content .activity:last-child {
+    margin-bottom: 30px;
+  }
+}
+
+/*-----------*/
+
+/* История */
+.p-profiles .profile-head .c-history.x3 {
+  width: 25%;
+  margin: 0px;
+  margin-bottom: var(--block-indents);
+}
+
+.p-profiles .profile-head .c-history .entry img {
+  max-height: 80px;
+  max-width: 48px;
+  border-radius: var(--border-radius);
+  margin: -4px 10px -4px 0px;
+  margin-right: 10px;
+}
+
+.p-profiles .profile-head .c-history .entry:first-child {
+  margin: 0px;
+  padding: 12px 8px;
+}
+
+.p-profiles .profile-head .c-history .entry {
+  margin: 0px;
+  padding: 12px 8px;
+  transition: 0.16s cubic-bezier(0.4, 0, 0.6, 1);
+}
+
+.p-profiles .profile-head .c-history .entry:hover {
+  background-color: var(--history-select);
+}
+
+/*-----------*/
+
+
+/* Время за аниме и мангой */
+.p-profiles .profile-head .c-info {
+  width: 75%;
+  overflow: hidden;
+  padding-right: var(--block-indents);
+}
+
+.p-profiles-show .lifetime .title {
+  margin-bottom: var(--middle-indent);
+  text-transform: uppercase;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+  align-items: flex-end;
+}
+
+.p-profiles-show .lifetime .bar {
+  height: 8px;
+  border-radius: var(--border-radius);
+}
+
+.profile-content>.cc-2.block>.c-column.c-left>.lifetime.b-stats_bar>.title>.label {
+  font-size: 0px;
+}
+
+.profile-content>.cc-2.block>.c-column.c-left>.lifetime.b-stats_bar>.title>.label:before {
+  content: "Активность";
+}
+
+/*-----------*/
+
+/* Актвиность пользователя */
+.p-profiles-show .profile-content .activity .title {
+  font-size: 0px;
+}
+
+.p-profiles-show .profile-content .activity .title::before {
+  content: "График активности";
+}
 
 .bar.vertical .line .bar-container .bar {
-    border-radius: 6px 6px 0px 0px;
-    animation: ActivityAnimation;
-    animation-duration: 3s;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
+  border-radius: 6px 6px 0px 0px;
+  animation: ActivityAnimation;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
 }
 
 .bar.vertical .line .bar-container .bar:hover {
-    animation: none;
+  animation: none;
 }
 
 
 @keyframes ActivityAnimation {
-    0% {
-        transform:translateY(0px);
-    }
-    50% {
-        transform:translateY(15%);
-    }
-    100% {
-        transform:translateY(0px);
-    }
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(15%);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
 }
 
 .activity .graph.vertical .line:nth-of-type(6n+2) .bar {
-    animation-delay: -.25s;
-  }
-  .activity .graph.vertical .line:nth-of-type(6n+4) .bar {
-    animation-delay: -.5s;
-  }
-  .activity .graph.vertical .line:nth-of-type(6n+3) .bar {
-    animation-delay: -.75s;
-  }
-  .activity .graph.vertical .line:nth-of-type(6n+6) .bar {
-    animation-delay: -1s;
-  }
-  .activity .graph.vertical .line:nth-of-type(6n+5) .bar {
-    animation-delay: -1.25s;
-  }
+  animation-delay: -.25s;
+}
 
-  .bar.simple .bar.s0 {
-    background-color: var(--very-hight-rating);
-  }
-  .bar.simple .bar.s1 {
-    background-color: var(--high-rating);
-  }
-  .bar.simple .bar.s2 {
-    background-color: var(--average-rating);
-  }
-  .bar.simple .bar.s3 {
-    background-color: var(--small-rating);
-  }
+.activity .graph.vertical .line:nth-of-type(6n+4) .bar {
+  animation-delay: -.5s;
+}
 
-  /*--------------------------------------------------------------*/
+.activity .graph.vertical .line:nth-of-type(6n+3) .bar {
+  animation-delay: -.75s;
+}
+
+.activity .graph.vertical .line:nth-of-type(6n+6) .bar {
+  animation-delay: -1s;
+}
+
+.activity .graph.vertical .line:nth-of-type(6n+5) .bar {
+  animation-delay: -1.25s;
+}
+
+.bar.simple .bar.s0 {
+  background-color: var(--very-high-rating);
+}
+
+.bar.simple .bar.s1 {
+  background-color: var(--high-rating);
+}
+
+.bar.simple .bar.s2 {
+  background-color: var(--average-rating);
+}
+
+.bar.simple .bar.s3 {
+  background-color: var(--small-rating);
+}
+
+.bar.simple .bar.s0:hover,
+.bar.simple .bar.s1:hover,
+.bar.simple .bar.s2:hover,
+.bar.simple .bar.s3:hover {
+  filter: brightness(80%);
+}
+
+.bar.simple .bar.s0:hover {
+  background-color: var(--very-high-rating);
+}
+
+.bar.simple .bar.s1:hover {
+  background-color: var(--high-rating);
+}
+
+.bar.simple .bar.s2:hover {
+  background-color: var(--average-rating);
+}
+
+.bar.simple .bar.s3:hover {
+  background-color: var(--small-rating);
+}
+
+/*-----------*/
